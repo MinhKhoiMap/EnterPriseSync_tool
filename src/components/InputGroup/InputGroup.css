@@ -1,0 +1,40 @@
+.input__group {
+  display: inline-block;
+  position: relative;
+}
+
+.input__group label {
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 100%;
+  font-size: 18px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.input__group input {
+  width: 250px;
+  font-size: 17px;
+  padding: 4px 10px 4px 10px;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid #634fbe;
+  border-radius: 2px;
+}
+
+.input__group input::placeholder {
+  transition: all 0.2s linear;
+  color: #634fbe;
+  font-size: 14px;
+  transform: translateY(0);
+}
+
+.input__group input:focus::placeholder {
+  color: #fff;
+  transform: translateY(10px);
+}
+
+.input__group input:focus ~ label {
+  transform: translateY(0);
+}
